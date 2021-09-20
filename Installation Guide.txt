@@ -1,0 +1,11 @@
+Installation Guide 
+
+step1 :
+ Download the Docker and Docker-compose in machine 
+step2 : 
+ Download the git to clone the repository 
+step3 : 
+ clone the Repo https://github.com/hacktheak/ptc.git 
+step4 : 
+ run the command Docker-compose up -d
+ 
