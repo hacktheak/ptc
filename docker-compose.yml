@@ -13,7 +13,6 @@ db:
 tomcat1:
   build: ./app1
   container_name: app1
-  # Environment variables do not appear to be getting loaded the first time Tomcat starts!
   environment:
     VIRTUAL_HOST: tomcat1.local
     VIRTUAL_PORT: 8080
@@ -23,7 +22,7 @@ tomcat1:
   links:
     - db
 
-# First node of the second Tomcat virtual host.
+# Second tomcat server 
 tomcat2:
   build: ./app2
   container_name: app2
@@ -36,7 +35,7 @@ tomcat2:
   links:
     - db
 
-# nginx container that automatically creates a load balancer / reverse proxy across the 3 tomcat containers / 2 virtual hosts.
+# nginx container that automatically creates a load balancer 
 nginx:
   image: jwilder/nginx-proxy:latest
   ports:
