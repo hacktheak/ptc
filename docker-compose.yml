@@ -1,6 +1,6 @@
 # MySQL database shared with tomcat containers.
 db:
-  image: maria:latest
+  image: mysql:latest
   environment:
     MYSQL_ROOT_PASSWORD: ak
     MYSQL_DATABASE: students
